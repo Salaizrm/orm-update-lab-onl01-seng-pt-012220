@@ -75,7 +75,7 @@ class Student
     WHERE name = ?
     SQL
 
-    r = DB[:conn].execute(sql, name)[0]
+    r = DB[:conn].execute(sql, name)[1]
     self.new_from_db(r)
   end
 
