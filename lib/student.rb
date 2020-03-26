@@ -13,9 +13,9 @@ class Student
 
   def self.create_table
     sql = <<-SQL
-    
+    CREATE TABLE
     SQL
-    
+
   end
 
 
