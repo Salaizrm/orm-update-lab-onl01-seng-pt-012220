@@ -65,7 +65,6 @@ class Student
     name = row[1]
     grade = row[2]
     self.new(id, name, grade)
-    binding.pry
   end
 
 
