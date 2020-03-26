@@ -39,6 +39,14 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 
+  def update
+    sql = <<-SQL
+    UPDATE students 
+    SET name = ?, grade = ? 
+    WHERE id = ?
+    SQL
+  end
+
 
 
   # Remember, you can access your database connection anywhere in this class
