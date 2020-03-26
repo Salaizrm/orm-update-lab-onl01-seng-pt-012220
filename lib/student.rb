@@ -75,9 +75,8 @@ class Student
     WHERE name = ?
     SQL
 
-    DB[:conn].execute(sql, name).map do |row|
-      self.new_from_db(row)[0]
-    end
+    r = DB[:conn].execute(sql, name)
+    self.new_from_db(r)
   end
 
   # Remember, you can access your database connection anywhere in this class
